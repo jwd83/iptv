@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-tv"></i> IPTV Player</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search channels..." class="search-input">
+                <button id="searchBtn" class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="category-filter">
+                    <h3>Categories</h3>
+                    <div class="category-list" id="categoryList">
+                        <button class="category-btn active" data-category="all">All Channels</button>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="player-section" id="playerSection" style="display: none;">
+                    <div class="video-container">
+                        <video id="videoPlayer" controls>
+                            <source src="" type="application/x-mpegURL">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="player-info">
+                        <h3 id="currentChannelName">Channel Name</h3>
+                        <button id="closePlayer" class="close-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+
+                <div class="channels-grid" id="channelsGrid">
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading channels...</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
