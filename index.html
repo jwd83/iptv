@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,15 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header class="header">
-            <h1><i class="fas fa-tv"></i> IPTV Player</h1>
+            <h1>
+                <a href="?">
+                    <i class="fas fa-tv"></i> IPTV Player
+                </a>
+            </h1>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search channels..." class="search-input">
                 <button id="searchBtn" class="search-btn"><i class="fas fa-search"></i></button>
@@ -54,4 +60,5 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
